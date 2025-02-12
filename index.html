@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="main" class="bg-[#ffffff] flex flex-col justify-center items-center">
+        <img id="bulb" src="https://ik.imagekit.io/harrison/Java%20Script/bulb-go-on-img.png" alt="blub"
+            class="w-[300px] h-[300px]">
+        <img id="cat" src="https://ik.imagekit.io/harrison/Java%20Script/cat-img.png" alt="cat" class="w-[300px] h-[300px]">
+        <div class="m-2 bg-gray-600 py-2 px-4 border-[2px] border-[white] rounded-lg">
+        <button id="off-btn" class="bg-[red] text-white py-3 px-4 m-2 rounded-lg">Off</button>
+        <button id="on-btn" class="bg-[green] text-white py-3 px-4 m-2 rounded-lg">On</button>
+    </div>
+    </div>
+</body>
+<script>
+    const mainElement =document.getElementById("main")
+    const bulbElement =document.getElementById("bulb")
+    const catElement =document.getElementById("cat")
+    const offElement =document.getElementById("off-btn")
+    const onElement =document.getElementById("on-btn")
+
+    offElement.addEventListener("click",()=>{
+        bulbElement.src="https://ik.imagekit.io/harrison/Java%20Script/bulb-go-off-img.png";
+        catElement.src="https://ik.imagekit.io/harrison/Java%20Script/cat-eyes-img.png";
+        console.log(catElement)
+        onElement.className="bg-[green] text-white py-3 px-4 m-2"
+        offElement.className="bg-[gray] text-white py-3 px-4 m-2"
+        mainElement.className="bg-[black] flex flex-col justify-center items-center"
+
+    })
+    onElement.addEventListener("click",()=>{
+        bulbElement.src="https://ik.imagekit.io/harrison/Java%20Script/bulb-go-on-img.png";
+        catElement.src="https://ik.imagekit.io/harrison/Java%20Script/cat-img.png";
+        offElement.className="bg-[red] text-white py-3 px-4 m-2"
+        onElement.className="bg-[gray] text-white py-3 px-4 m-2"
+        mainElement.className="bg-[white] flex flex-col justify-center items-center"
+    })
+
+</script>
+
+</html>
